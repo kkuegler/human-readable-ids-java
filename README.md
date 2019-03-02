@@ -13,6 +13,13 @@ Maven
 </dependency>
 ``` 
 
+Use
+---
+```java
+// create the generator once and use it any number of times, even concurrently across threads
+HumanReadableIdGenerator idGen = new PermutationBasedHumanReadableIdGenerator();
+String id = idGen.generate();
+```
 
 Acknowledgments
 ---------------
