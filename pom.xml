@@ -28,7 +28,7 @@
 
 	<scm>
 		<connection>scm:git:git://github.com/kkuegler/human-readable-ids-java.git</connection>
-		<developerConnection>scm:git:ssh://github.com:kkuegler/human-readable-ids-java.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:kkuegler/human-readable-ids-java.git</developerConnection>
 		<url>http://github.com/kkuegler/human-readable-ids-java/tree/master</url>
 	</scm>
 
