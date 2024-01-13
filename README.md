@@ -9,7 +9,7 @@ Maven
 <dependency>
     <groupId>com.github.kkuegler</groupId>
     <artifactId>human-readable-ids-java</artifactId>
-    <version>0.2</version>
+    <version>0.3</version>
 </dependency>
 ``` 
 
