@@ -4,7 +4,7 @@
 
 	<groupId>com.github.kkuegler</groupId>
 	<artifactId>human-readable-ids-java</artifactId>
-	<version>0.3</version>
+	<version>0.4-SNAPSHOT</version>
 
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>A Java id generator to produce random human-readable identifiers like 'fast-elephant-42'</description>
@@ -29,7 +29,7 @@
 		<connection>scm:git:git://github.com/kkuegler/human-readable-ids-java.git</connection>
 		<developerConnection>scm:git:git@github.com:kkuegler/human-readable-ids-java.git</developerConnection>
 		<url>http://github.com/kkuegler/human-readable-ids-java/tree/master</url>
-	  <tag>v0.3</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<properties>
