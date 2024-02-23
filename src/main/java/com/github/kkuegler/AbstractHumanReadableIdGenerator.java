@@ -21,6 +21,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
+import java.util.Random;
 import java.util.stream.IntStream;
 
 /**
@@ -34,9 +35,10 @@ public abstract class AbstractHumanReadableIdGenerator implements HumanReadableI
 
     protected final String[] numbers = IntStream.range(0, 100).mapToObj(Integer::toString).toArray(String[]::new);
 
-    protected final SecureRandom random = new SecureRandom();
+    protected final Random random;
 
-    protected AbstractHumanReadableIdGenerator() {
+    protected AbstractHumanReadableIdGenerator(Random random) {
+        this.random = random;
         ClassLoader classLoader = AbstractHumanReadableIdGenerator.class.getClassLoader();
         try (InputStream data = classLoader.getResourceAsStream("animals.txt")) {
             animals = new BufferedReader(new InputStreamReader(data, StandardCharsets.UTF_8)).lines().toArray(String[]::new);
@@ -48,6 +50,10 @@ public abstract class AbstractHumanReadableIdGenerator implements HumanReadableI
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    protected AbstractHumanReadableIdGenerator() {
+        this(new SecureRandom());
     }
 
     /**
