@@ -15,6 +15,8 @@
  */
 package com.github.kkuegler;
 
+import java.util.Random;
+
 /**
  * A simple generator for human-readable ids which chooses each of the id's parts randomly.
  */
@@ -22,6 +24,10 @@ public class RandomHumanReadableIdGenerator extends AbstractHumanReadableIdGener
 
     public RandomHumanReadableIdGenerator() {
         super();
+    }
+
+    public RandomHumanReadableIdGenerator(Random random) {
+        super(random);
     }
 
     @Override

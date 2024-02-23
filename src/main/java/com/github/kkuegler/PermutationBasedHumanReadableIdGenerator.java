@@ -35,6 +35,10 @@ public class PermutationBasedHumanReadableIdGenerator extends AbstractHumanReada
         super();
     }
 
+    public PermutationBasedHumanReadableIdGenerator(Random random) {
+        super(random);
+    }
+
     @Override
     public String generate() {
         synchronized (this) {
